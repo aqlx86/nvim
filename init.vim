@@ -33,5 +33,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ervandew/supertab'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
