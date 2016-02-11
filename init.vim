@@ -9,7 +9,6 @@ let g:vimPath = system('realpath '.g:vimrcPath)
 let g:vimDir = fnamemodify(g:vimPath, ':h')
 let g:plugDir = g:vimDir.'/plugged'
 
-
 set encoding=utf-8                                      " Set right encoding and formats
 set fileformat=unix
 set updatetime=500                                      " Let plugins show effects after 500ms, not 4s
@@ -29,7 +28,6 @@ set showcmd                                             " Show last command
 set lazyredraw                                          " Don't redraw when not needed
 set laststatus=2                                        " Always show the status line
 set scrolloff=10                                        " Keep cursor from reaching end of screen
-set cursorline                                          " Highlight current line
 set autoindent                                          " Auto indent line on CR
 
 set tabstop=4
@@ -38,7 +36,7 @@ set shiftwidth=4
 set expandtab
 set autoread
 
-set background=dark
+" set background=dark
 set guifont=DejaVu\ Sans:s12
 
 " ----------------------------------------------------------------------------
@@ -51,7 +49,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Vim airline setup
 
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme= 'kalisi'
+let g:airline_theme='kalisi'
 let g:airline_powerline_fonts = 1
 
 Plug 'ervandew/supertab'
@@ -76,8 +74,8 @@ let NERDTreeShowBookmarks=0
 let NERDTreeIgnore=['\.hg', '.DS_Store']
 
 
-nnoremap <F2> :NERDTreeToggle<CR>
-nnoremap <F3> :NERDTreeFind<CR>
+nnoremap <F8> :NERDTreeToggle<CR>
+nnoremap <F9> :NERDTreeFind<CR>
 
 " ----------------------------------------------------------------------------
 " Editing Plugins
@@ -99,7 +97,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 
 " Gitgutter setup
-let g:gitgutter_realtime=0
+let g:gitgutter_realtime=1
 
 " Fugitive setup
 nnoremap <silent> <leader>gs :Gstatus<CR>
@@ -116,6 +114,20 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 " ----------------------------------------------------------------------------
 " Basic useful functions
 " ----------------------------------------------------------------------------
+
+function! PreserveCursorPosition(command)
+    " preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+
+    " do the business:
+    execute a:command
+
+    " clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
 
 function! StripTrailingWhitespace()
     call PreserveCursorPosition("%s/\\s\\+$//e")
