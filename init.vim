@@ -108,8 +108,11 @@ nnoremap <silent> <leader>gl :Glog<CR>
 nnoremap <silent> <leader>gp :Git push<CR>
 nnoremap <silent> <leader>gw :Gwrite<CR>
 nnoremap <silent> <leader>gr :Gremove<CR>
+
 autocmd FileType gitcommit nmap <buffer> U :Git checkout -- <C-r><C-g><CR>
 autocmd BufReadPost fugitive://* set bufhidden=delete
+
+autocmd BufWritePre * :%s/\s\+$//e
 
 " ----------------------------------------------------------------------------
 " Basic useful functions
@@ -152,7 +155,6 @@ nmap <CR> o<Esc>
 " Tab shortcuts
 map <leader>tn :tabnew<CR>
 map <leader>tc :tabclose<CR>
-
 
 
 call plug#end()
