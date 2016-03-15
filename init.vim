@@ -36,7 +36,7 @@ set shiftwidth=4
 set expandtab
 set autoread
 
-" set background=dark
+set background=dark
 set guifont=DejaVu\ Sans:s12
 
 " ----------------------------------------------------------------------------
@@ -86,7 +86,10 @@ Plug 'jiangmiao/auto-pairs'
 " ----------------------------------------------------------------------------
 " Colors Themes
 " ----------------------------------------------------------------------------
+Plug 'morhetz/gruvbox'
+Plug 'flazz/vim-colorschemes'       " all the colorschemes
 
+colorscheme gruvbox
 
 
 " ----------------------------------------------------------------------------

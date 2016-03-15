@@ -44,3 +44,5 @@ bower_components
 
 # .nvim specific
 plugged
+colors
+autoload/plug.vim.old
