@@ -54,7 +54,7 @@ let g:airline_powerline_fonts = 1
 
 Plug 'ervandew/supertab'
 Plug 'kien/ctrlp.vim'
-
+Plug 'mhinz/vim-startify'
 
 " ----------------------------------------------------------------------------
 " Navigation Plugins
