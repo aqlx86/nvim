@@ -152,6 +152,10 @@ nmap <leader>f$ :call StripTrailingWhitespace()<CR>
 " Quick save
 nnoremap <leader>w :w<cr>
 
+" Navigate buffers
+nnoremap <leader>z :bp<cr>
+nnoremap <leader>x :bn<cr>
+
 " Add newline with return key
 nmap <CR> o<Esc>
 
