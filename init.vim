@@ -18,6 +18,7 @@ noremap â b                                             " Mac OS X option-left 
 noremap æ e
 inoremap â <C-o>b
 inoremap æ <C-o>e<right>
+inoremap <F2> <c-o>:w<cr>								" save f2
 
 " ----------------------------------------------------------------------------
 " Basic UI Configuration
