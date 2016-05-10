@@ -29,6 +29,8 @@ set lazyredraw                                          " Don't redraw when not 
 set laststatus=2                                        " Always show the status line
 set scrolloff=10                                        " Keep cursor from reaching end of screen
 set autoindent                                          " Auto indent line on CR
+set cursorline          				   " highlight current line
+set wildmenu            			 	   " visual autocomplete for command menu
 
 set tabstop=4
 set softtabstop=4
