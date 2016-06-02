@@ -40,7 +40,11 @@ set expandtab
 set autoread
 
 set background=dark
-set guifont=DejaVu\ Sans:s12
+" set guifont=DejaVu\ Sans:s12
+set guifont=Roboto\ Mono\ Thin\ for\ Powerline:h14
+
+set linespace=14
+set guioptions-=r
 
 " ----------------------------------------------------------------------------
 " UI Plugins
@@ -52,7 +56,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Vim airline setup
 
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='kalisi'
+let g:airline_theme='hybrid'
 let g:airline_powerline_fonts = 1
 
 Plug 'ervandew/supertab'
@@ -92,7 +96,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'morhetz/gruvbox'
 Plug 'flazz/vim-colorschemes'       " all the colorschemes
 
-colorscheme gruvbox
+" colorscheme gruvbox
+colorscheme hybrid_material
 
 
 " ----------------------------------------------------------------------------
