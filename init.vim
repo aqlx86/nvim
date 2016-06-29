@@ -108,6 +108,7 @@ colorscheme hybrid_material
 
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
 
 " Gitgutter setup
 let g:gitgutter_realtime=1
